@@ -11,7 +11,10 @@
 import java.util.Arrays;
 
 public class KnapsackMemoization {
-    static int w = 7, n = 4;
+
+    static int[] wt = { 10, 20, 30 }; // profit
+    static int[] val  = { 60, 100, 120 };  // weight
+    static int w = 50, n = wt.length;
 
     static int[][] t = new int[n+1][w+1];
 
@@ -36,8 +39,6 @@ public class KnapsackMemoization {
 
 
     public static void main ( String[] args ) {
-        int[] wt  = {1, 3, 4, 5}; // weight
-        int[] val = {1, 4, 5, 7}; // profit
 
         // filling the table with -1
         for (int[] ints : t) {
